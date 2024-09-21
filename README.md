@@ -1,6 +1,3 @@
-Here’s the full `README.md` with the content you provided, formatted properly, and included inside a code block (black box) as per your request. I've also added the image placeholders for visualizations.
-
-```markdown
 # YouTube Comments Sentiment Analysis
 
 This project performs sentiment analysis on YouTube comments to extract meaningful insights and visualize trends. Using Python, the YouTube Data API, and various data visualization libraries, this analysis provides an understanding of comment sentiment, commenter activity, and time-based patterns.
@@ -19,10 +16,7 @@ You provide the YouTube video ID, and the script fetches the comments in real-ti
 ## Installation
 
 To run this project locally, install the required libraries by running:
-
-```bash
 pip install google-api-python-client pandas nltk wordcloud matplotlib textblob seaborn
-```
 
 ## Usage
 1. **API Key Setup**: Ensure you have a valid [YouTube Data API Key](https://console.developers.google.com/).
@@ -34,7 +28,7 @@ pip install google-api-python-client pandas nltk wordcloud matplotlib textblob s
 ```plaintext
 📁 YouTube-Comments-Sentiment-Analysis
 │
-├── notebook.ipynb               # Jupyter Notebook containing the analysis and visualizations.
+├── Youtube Comments Analysis.ipynb # Jupyter Notebook containing the analysis and visualizations.
 ├── youtube_comments.csv          # (Auto-generated) Raw data of YouTube comments.
 ├── youtube_comments_with_sentiment.csv  # (Auto-generated) Data with sentiment analysis results.
 ├── images/                       # Folder containing images of visualizations.
@@ -51,7 +45,7 @@ A line plot showing the average sentiment of comments over time, illustrating tr
 ### 2. Top Commenters
 A bar plot displaying the top 10 commenters by the number of comments, highlighting the most active users.
 
-![Top Commenters](images/top_commenters.png)
+![Top Commenters](images/Top_commenters.png)
 
 ### 3. Average Sentiment by Hour of Day
 A bar plot showing the average sentiment of comments by hour of the day, revealing how sentiment varies throughout the day.
@@ -79,19 +73,3 @@ A box plot showing the distribution of comment lengths across different days of 
 - [WordCloud](https://github.com/amueller/word_cloud)
 - [Matplotlib](https://matplotlib.org/)
 - [Seaborn](https://seaborn.pydata.org/)
-```
-
-### Steps:
-1. **Generate and Save the Visualizations**:
-   Make sure to generate and save the visualizations in your Jupyter notebook. Use the following code to save each plot:
-   ```python
-   plt.savefig('images/sentiment_over_time.png')  # Example for saving the "Sentiment Over Time" plot
-   ```
-
-2. **Upload the Images**:
-   Create an `images/` folder in your GitHub repository and upload the saved visualization images there.
-
-3. **Ensure Correct Image Paths**:
-   Make sure the image paths in the `README.md` file match the actual locations of your image files.
-
-This `README.md` file is ready to be pasted directly into GitHub for your project. The visualizations will be displayed as long as the image files are correctly placed in the `images/` folder of your project.
