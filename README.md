@@ -1,60 +1,97 @@
-# YouTube-Comments-Sentiment-Analysis
+Here’s the full `README.md` with the content you provided, formatted properly, and included inside a code block (black box) as per your request. I've also added the image placeholders for visualizations.
 
-Project Overview
-This project performs sentiment analysis on YouTube comments to extract meaningful insights and visualize trends. Using Python, Google API, and various data visualization libraries, this analysis provides an understanding of comment sentiment, commenter activity, and time-based patterns.
+```markdown
+# YouTube Comments Sentiment Analysis
 
-Objectives
-Sentiment Analysis: Determine the sentiment (positive, negative, neutral) of YouTube comments.
-Time-based Patterns: Explore how sentiment and comment activity change over time.
-Data Visualization: Create visualizations to illustrate findings and trends.
+This project performs sentiment analysis on YouTube comments to extract meaningful insights and visualize trends. Using Python, the YouTube Data API, and various data visualization libraries, this analysis provides an understanding of comment sentiment, commenter activity, and time-based patterns.
 
-Dataset
-Source: Comments retrieved using the YouTube Data API.
-Fields: Comment text, timestamp, commenter name.
+## Objectives
+- **Sentiment Analysis**: Determine the sentiment (positive, negative, neutral) of YouTube comments.
+- **Time-based Patterns**: Explore how sentiment and comment activity change over time.
+- **Data Visualization**: Create visualizations to illustrate findings and trends.
 
-Installation
-To get started, install the required libraries:
-pip install google-api-python-client pandas nltk wordcloud matplotlib textblob
+## Dataset
+- **Source**: Comments are retrieved dynamically using the [YouTube Data API](https://developers.google.com/youtube/v3).
+- **Fields**: Comment text, timestamp, commenter name.
 
-Usage
-API Key Setup: Ensure you have a valid YouTube Data API key.
-Run the Analysis: Execute the provided Jupyter Notebook to perform the analysis.
+You provide the YouTube video ID, and the script fetches the comments in real-time for analysis.
 
-Project Structure
-notebook.ipynb: Jupyter Notebook containing the analysis and visualizations.
-youtube_comments.csv: Raw data of YouTube comments.
-youtube_comments_with_timestamps.csv: Processed data with sentiment analysis.
+## Installation
 
-Key Visualizations
-1. Sentiment Over Time
+To run this project locally, install the required libraries by running:
 
-Description: This line plot shows the average sentiment of comments over time, illustrating trends and fluctuations.
+```bash
+pip install google-api-python-client pandas nltk wordcloud matplotlib textblob seaborn
+```
 
-2. Top Commenters
+## Usage
+1. **API Key Setup**: Ensure you have a valid [YouTube Data API Key](https://console.developers.google.com/).
+2. **Run the Analysis**: Execute the provided Jupyter Notebook to fetch comments and perform sentiment analysis.
+   - In `notebook.ipynb`, enter the video ID for which you want to analyze the comments.
 
-Description: This bar plot displays the top 10 commenters by the number of comments, highlighting the most active users.
+## Project Structure
 
-3. Average Sentiment by Hour of Day
+```plaintext
+📁 YouTube-Comments-Sentiment-Analysis
+│
+├── notebook.ipynb               # Jupyter Notebook containing the analysis and visualizations.
+├── youtube_comments.csv          # (Auto-generated) Raw data of YouTube comments.
+├── youtube_comments_with_sentiment.csv  # (Auto-generated) Data with sentiment analysis results.
+├── images/                       # Folder containing images of visualizations.
+├── README.md                     # Project README file.
+```
 
-Description: This bar plot shows the average sentiment of comments by hour of the day, revealing how sentiment varies throughout the day.
+## Key Visualizations
 
-4. Sentiment Distribution
+### 1. Sentiment Over Time
+A line plot showing the average sentiment of comments over time, illustrating trends and fluctuations.
 
-Description: This bar plot illustrates the distribution of comment sentiments (positive, negative, neutral), providing a breakdown of overall sentiment.
+![Sentiment Over Time](images/sentiment_over_time.png)
 
-5. Comment Length Distribution by Day of the Week
+### 2. Top Commenters
+A bar plot displaying the top 10 commenters by the number of comments, highlighting the most active users.
 
-Description: This box plot shows the distribution of comment lengths across different days of the week, indicating variations in comment size based on the day.
+![Top Commenters](images/top_commenters.png)
 
-Future Work
-Advanced Sentiment Analysis: Explore more sophisticated sentiment analysis techniques.
-Feature Expansion: Integrate additional features such as video view counts and like/dislike ratios.
-Extended Data Set: Analyze comments from a wider range of videos for more comprehensive insights.
+### 3. Average Sentiment by Hour of Day
+A bar plot showing the average sentiment of comments by hour of the day, revealing how sentiment varies throughout the day.
 
-Acknowledgments
-Google YouTube Data API
-TextBlob
-WordCloud
-Matplotlib
-Seaborn
+![Average Sentiment by Hour of Day](images/sentiment_by_hour.png)
 
+### 4. Sentiment Distribution
+A bar plot illustrating the distribution of comment sentiments (positive, negative, neutral), providing a breakdown of overall sentiment.
+
+![Sentiment Distribution](images/sentiment_distribution.png)
+
+### 5. Comment Length Distribution by Day of the Week
+A box plot showing the distribution of comment lengths across different days of the week, indicating variations in comment size based on the day.
+
+![Comment Length Distribution by Day of the Week](images/comment_length_distribution.png)
+
+## Future Work
+- **Advanced Sentiment Analysis**: Explore more sophisticated sentiment analysis techniques (e.g., using deep learning models like BERT).
+- **Feature Expansion**: Integrate additional features such as video view counts, like/dislike ratios, and keyword analysis.
+- **Extended Dataset**: Analyze comments from a wider range of videos for more comprehensive insights.
+
+## Acknowledgments
+- [Google YouTube Data API](https://developers.google.com/youtube/v3)
+- [TextBlob](https://textblob.readthedocs.io/en/dev/)
+- [WordCloud](https://github.com/amueller/word_cloud)
+- [Matplotlib](https://matplotlib.org/)
+- [Seaborn](https://seaborn.pydata.org/)
+```
+
+### Steps:
+1. **Generate and Save the Visualizations**:
+   Make sure to generate and save the visualizations in your Jupyter notebook. Use the following code to save each plot:
+   ```python
+   plt.savefig('images/sentiment_over_time.png')  # Example for saving the "Sentiment Over Time" plot
+   ```
+
+2. **Upload the Images**:
+   Create an `images/` folder in your GitHub repository and upload the saved visualization images there.
+
+3. **Ensure Correct Image Paths**:
+   Make sure the image paths in the `README.md` file match the actual locations of your image files.
+
+This `README.md` file is ready to be pasted directly into GitHub for your project. The visualizations will be displayed as long as the image files are correctly placed in the `images/` folder of your project.
